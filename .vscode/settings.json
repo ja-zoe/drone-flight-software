@@ -17,5 +17,6 @@
   "files.associations": {
     "format": "cpp",
     "thread": "cpp"
-  }
+  },
+  "idf.currentSetup": "/home/jazoe/esp/v5.5.1/esp-idf"
 }
