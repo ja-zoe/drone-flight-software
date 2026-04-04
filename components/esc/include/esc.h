@@ -1,6 +1,0 @@
-class ESC {
-  public:
-
-  private:
-  
-}
