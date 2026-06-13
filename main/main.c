@@ -43,7 +43,9 @@ void app_main(void)
   configASSERT(telemetryPacketMutexHandle);
 
 /*---- Start Tasks ----*/
-  // Telemetry Log Task
+  // ====================================
+  // Telemetry Log Task: log telemetry
+  // ====================================
   TaskHandle_t telemetryLogTaskHandle = NULL;
   static StaticTask_t telemetryLogTaskBuffer;
   static StackType_t telemetryLogTaskStack[ TELEMETRY_LOG_TASK_STACK_SIZE ];
@@ -56,5 +58,6 @@ void app_main(void)
                 telemetryLogTaskStack,       // Array to use as the task's stack.
                 &telemetryLogTaskBuffer );   // Variable to hold the task's data structure.
   configASSERT(telemetryLogTaskHandle);
-  vTaskDelay(pdMS_TO_TICKS(20)); 
+  
+  ay(pdMS_TO_TICKS(20)); 
 }

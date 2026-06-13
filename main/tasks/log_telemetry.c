@@ -18,7 +18,7 @@ void logTelemetryTask( void *pvParameters ) {
       control_packet_in = control_packet;
     xSemaphoreGive(controlPacketMutexHandle);
 
-    ESP_LOGI(TAG, "----------\THROTTLE: %d\nYAW: %d\nPITCH: %d\nROLL: %d", control_packet_in.joysticks_values.yaw, control_packet_in.joysticks_values.throttle, control_packet_in.joysticks_values.roll, control_packet_in.joysticks_values.pitch);
-    vTaskDelay(50);
+    ESP_LOGI(TAG, "\nTHROTTLE: %d\nYAW: %d\nPITCH: %d\nROLL: %d", control_packet_in.joysticks_values.throttle, control_packet_in.joysticks_values.yaw, control_packet_in.joysticks_values.pitch, control_packet_in.joysticks_values.roll);
+    vTaskDelay(pdMS_TO_TICKS(5));
   }
 }

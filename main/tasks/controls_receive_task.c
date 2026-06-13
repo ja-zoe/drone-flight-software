@@ -26,11 +26,6 @@ void controlsReceiveTask( void *pvParameters ) {
 
     control_packet_in = control_packet;
     xSemaphoreGive(controlPacketMutexHandle);
-
-    ret = esp_now_send(peer_addr, (uint8_t *) &control_packet, sizeof(control_packet));
-    if (ret != ESP_OK) {
-      ESP_LOGE(TAG, "Error transmitting control data: %s", esp_err_to_name(ret));
-    }
     vTaskDelay(pdMS_TO_TICKS(5));
   };
 };
