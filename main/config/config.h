@@ -12,7 +12,24 @@
 #define SDA_GPIO_CONF 5
 #define SCL_GPIO_CONF 6
 
+/* ------------------------------ */
+// Tasks Config
+/* ------------------------------ */
+#define READ_SENSORS_TASK_STACK_SIZE 4096
 #define TELEMETRY_LOG_TASK_STACK_SIZE 4096
+
+/* ------------------------------ */
+// Read Sensors Task Config
+/* ------------------------------ */
+#define READ_SENSORS_TASK_FREQ_HZ 1000
+#define READ_GYRO_FREQ_DIV 1
+#define READ_ACCEL_FREQ_DIV 2
+#define READ_MAG_FREQ_DIV 4
+#define READ_BAROM_FREQ_DIV 8
+
+
+#define RATE_CTRL_FREQ_HZ
+#define ANGLE_CTRL_FREQ_HZ
 
 /* config.c functions */
 void nvs_init(void);
